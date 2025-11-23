@@ -1,0 +1,46 @@
+        :root {
+            --accent-color: #3b82f6; /* Blue-500 */
+        }
+        
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Dark background */
+            color: #f0f8ff; /* Light text */
+            transition: overflow 0.3s;
+        }
+        
+        /* --- NAVIGATION GLOWING STYLES --- */
+        .nav-active-glow {
+            color: #4f87ff; /* A strong blue */
+            border-bottom: 2px solid #4f87ff;
+            /* The Glow Effect */
+            box-shadow: 0 0 5px #4f87ff, 0 0 10px #4f87ff, 0 0 15px rgba(79, 135, 255, 0.5);
+            padding-bottom: 4px; 
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-hover-glow {
+            color: #9ca3af; /* gray-400 */
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .nav-hover-glow:hover {
+            color: #8bb7ff; /* Lighter blue on hover */
+            box-shadow: 0 0 5px #4f87ff;
+            text-shadow: 0 0 3px rgba(79, 135, 255, 0.5); 
+        }
+        /* -------------------------------------- */
+
+        /* Custom scroll-reveal styles */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
