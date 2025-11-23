@@ -1,0 +1,105 @@
+:root {
+            --accent-color: #3b82f6; /* Blue-500 */
+        }
+        
+        /* Configure Tailwind to use Inter font */
+        html {
+            /* Ensures smooth scrolling to sections, including the footer/contact section */
+            scroll-behavior: smooth; 
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Dark background */
+            color: #f0f8ff; /* Light text */
+        }
+        
+        /* Custom scroll-reveal styles */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover animation for project cards (used for experience cards too) */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%; /* Ensure all cards in the carousel are same height */
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2); /* Accent shadow */
+        }
+        
+        /* Glowing button effect */
+        .glow-button {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .glow-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.5s;
+            z-index: -1;
+        }
+
+        .glow-button:hover::before {
+            left: 100%;
+        }
+
+        /* Hero text animation */
+        #hero-headline {
+            animation: fadeInScale 1.5s ease-out forwards;
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Slider Specific Styles */
+        #projects-carousel, #workshop-carousel {
+            scroll-behavior: smooth;
+            transition: transform 0.5s ease-in-out;
+            /* Explicitly hide scrollbar for cross-browser compatibility */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        /* Hide scrollbar for Webkit browsers (Chrome, Safari, Opera) */
+        #projects-carousel::-webkit-scrollbar, #workshop-carousel::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .project-slide {
+            padding: 0 1rem; /* Spacing between cards */
+        }
+
+        /* Responsive width calculation for slides */
+        @media (min-width: 768px) {
+            .project-slide {
+                width: calc(100% / 3); /* Show 3 cards on desktop */
+            }
+        }
+        @media (max-width: 767px) {
+            .project-slide {
+                width: 100%; /* Show 1 card on mobile */
+            }
+        }
