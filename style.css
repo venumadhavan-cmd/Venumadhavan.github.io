@@ -1,23 +1,17 @@
 :root {
     --accent-color: #3b82f6;
-    /* Blue-500 */
 }
 
-/* Configure Tailwind to use Inter font */
 html {
-    /* Ensures smooth scrolling to sections, including the footer/contact section */
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: #0d1117;
-    /* Dark background */
     color: #f0f8ff;
-    /* Light text */
 }
 
-/* Custom scroll-reveal styles */
 .reveal-element {
     opacity: 0;
     transform: translateY(40px);
@@ -29,20 +23,16 @@ body {
     transform: translateY(0);
 }
 
-/* Hover animation for project cards (used for experience cards too) */
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
-    /* Ensure all cards in the carousel are same height */
 }
 
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2);
-    /* Accent shadow */
 }
 
-/* Glowing button effect */
 .glow-button {
     position: relative;
     overflow: hidden;
@@ -65,7 +55,6 @@ body {
     left: 100%;
 }
 
-/* Hero text animation */
 #hero-headline {
     animation: fadeInScale 1.5s ease-out forwards;
     opacity: 0;
@@ -79,19 +68,14 @@ body {
     }
 }
 
-/* Slider Specific Styles */
 #projects-carousel,
 #workshop-carousel {
     scroll-behavior: smooth;
     transition: transform 0.5s ease-in-out;
-    /* Explicitly hide scrollbar for cross-browser compatibility */
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
 }
 
-/* Hide scrollbar for Webkit browsers (Chrome, Safari, Opera) */
 #projects-carousel::-webkit-scrollbar,
 #workshop-carousel::-webkit-scrollbar {
     display: none;
@@ -99,20 +83,16 @@ body {
 
 .project-slide {
     padding: 0 1rem;
-    /* Spacing between cards */
 }
 
-/* Responsive width calculation for slides */
 @media (min-width: 768px) {
     .project-slide {
         width: calc(100% / 3);
-        /* Show 3 cards on desktop */
     }
 }
 
 @media (max-width: 767px) {
     .project-slide {
         width: 100%;
-        /* Show 1 card on mobile */
     }
 }

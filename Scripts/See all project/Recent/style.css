@@ -1,38 +1,35 @@
  :root {
-            --accent-color: #3b82f6; /* Blue-500 */
-        }
-        
-        /* Configure Tailwind to use Inter font and smooth scrolling */
-        html {
-            scroll-behavior: smooth; 
-        }
+     --accent-color: #3b82f6;
+ }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d1117; /* Dark background */
-            color: #f0f8ff; /* Light text */
-            transition: overflow 0.3s; /* Smooth transition for preventing body scroll */
-        }
-        
-        /* Custom scroll-reveal styles */
-        .reveal-element {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
+ html {
+     scroll-behavior: smooth;
+ }
 
-        .reveal-element.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+ body {
+     font-family: 'Inter', sans-serif;
+     background-color: #0d1117;
+     color: #f0f8ff;
+     transition: overflow 0.3s;
+ }
 
-        /* Hover animation for project cards */
-        .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%; /* Ensure all cards in the grid are same height */
-        }
+ .reveal-element {
+     opacity: 0;
+     transform: translateY(40px);
+     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+ }
 
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2); /* Accent shadow */
-        }
+ .reveal-element.active {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ .project-card {
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     height: 100%;
+ }
+
+ .project-card:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2);
+ }

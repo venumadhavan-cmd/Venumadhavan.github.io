@@ -1,109 +1,98 @@
  :root {
-            --accent-color: #3b82f6; /* Blue-500 */
-        }
-        
-        /* Configure Tailwind to use Inter font and smooth scrolling */
-        html {
-            scroll-behavior: smooth; 
-        }
+     --accent-color: #3b82f6;
+ }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d1117; /* Dark background */
-            color: #f0f8ff; /* Light text */
-            transition: overflow 0.3s;
-        }
-        
-        /* Custom scroll-reveal styles */
-        .reveal-element {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
+ html {
+     scroll-behavior: smooth;
+ }
 
-        .reveal-element.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+ body {
+     font-family: 'Inter', sans-serif;
+     background-color: #0d1117;
+     color: #f0f8ff;
+     transition: overflow 0.3s;
+ }
 
-        /* Timeline Styling */
-        .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
+ .reveal-element {
+     opacity: 0;
+     transform: translateY(40px);
+     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+ }
 
-        /* The actual vertical line that connects the steps */
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background: #1f2937; /* Gray-800 */
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-            z-index: 0;
-            transition: background 0.3s;
-        }
-        
-        /* Media query for mobile: timeline line shifts to the left */
-        @media screen and (max-width: 768px) {
-            .timeline::after {
-                left: 20px;
-            }
-        }
-        
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-            margin-bottom: 30px; /* Spacing between items */
-        }
+ .reveal-element.active {
+     opacity: 1;
+     transform: translateY(0);
+ }
 
-        /* Place the item cards on the left side (desktop) */
-        .timeline-item.left {
-            left: 0;
-        }
+ .timeline {
+     position: relative;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 20px 0;
+ }
 
-        /* Place the item cards on the right side (desktop) */
-        .timeline-item.right {
-            left: 50%;
-        }
+ .timeline::after {
+     content: '';
+     position: absolute;
+     width: 4px;
+     background: #1f2937;
+     top: 0;
+     bottom: 0;
+     left: 50%;
+     margin-left: -2px;
+     z-index: 0;
+     transition: background 0.3s;
+ }
 
-        /* Style the circles marking the start of each experience item */
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            right: -10px;
-            background-color: #3b82f6; /* Accent color */
-            border: 4px solid #0d1117; /* Same as body background to make it 'pop' */
-            top: 25px;
-            border-radius: 50%;
-            z-index: 10;
-        }
+ @media screen and (max-width: 768px) {
+     .timeline::after {
+         left: 20px;
+     }
+ }
 
-        /* Fix the position of the marker for right-aligned items (desktop) */
-        .timeline-item.right::after {
-            left: -8px; 
-        }
+ .timeline-item {
+     padding: 10px 40px;
+     position: relative;
+     background-color: inherit;
+     width: 50%;
+     margin-bottom: 30px;
+ }
 
-        /* Media query for mobile: all items are on the left */
-        @media screen and (max-width: 768px) {
-            .timeline-item {
-                width: 100%;
-                padding-left: 55px; /* Push content to the right of the line */
-                padding-right: 20px;
-                left: 0 !important; /* Force all to the left */
-            }
+ .timeline-item.left {
+     left: 0;
+ }
 
-            /* Shift the marker position to the left line (mobile) */
-            .timeline-item::after {
-                left: 12px !important;
-                right: auto;
-            }
-        }
+ .timeline-item.right {
+     left: 50%;
+ }
+
+ .timeline-item::after {
+     content: '';
+     position: absolute;
+     width: 16px;
+     height: 16px;
+     right: -10px;
+     background-color: #3b82f6;
+     border: 4px solid #0d1117;
+     top: 25px;
+     border-radius: 50%;
+     z-index: 10;
+ }
+
+ .timeline-item.right::after {
+     left: -8px;
+ }
+
+ @media screen and (max-width: 768px) {
+     .timeline-item {
+         width: 100%;
+         padding-left: 55px;
+         padding-right: 20px;
+         left: 0 !important;
+     }
+
+     .timeline-item::after {
+         left: 12px !important;
+         right: auto;
+     }
+ }

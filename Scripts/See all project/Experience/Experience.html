@@ -3,12 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- CRITICAL: Ensures proper scaling on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience - V M</title>
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -18,15 +15,12 @@
 
 <body class="antialiased">
 
-    <!-- Navigation Bar -->
     <header class="sticky top-0 z-50 bg-[#0d1117]/95 backdrop-blur-sm shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- Logo -->
             <a href="index.html"
                 class="text-2xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 z-50">V
                 M</a>
 
-            <!-- Desktop Menu - Links point to the main sections -->
             <div class="space-x-8 hidden md:flex">
                 <a href="../../../index.html"
                     class="nav-link text-gray-300 hover:text-blue-400 transition duration-300">Home</a>
@@ -35,20 +29,18 @@
                 <a href="../Experience/Experience.html"
                     class="nav-link text-xl text-blue-400 font-extrabold transition-nonee">Experience</a>
                 <a href="../IV/IV.html"
-                    class="nav-link text-gray-300 hover:text-blue-400 transition duration-300">Workshop & IV</a>
+                    class="nav-link text-gray-300 hover:text-blue-400 transition duration-300">Workshop &amp; IV</a>
                 <a href="../Recent/Recent.html"
                     class="nav-link text-gray-300 hover:text-blue-400 transition duration-300">Recent works</a>
                 <a href="../Contact/contact.html"
                     class="nav-link text-gray-300 hover:text-blue-400 transition duration-300">Contact us</a>
             </div>
 
-            <!-- Mobile Menu Button -->
             <button class="md:hidden text-gray-300 z-50 p-2" onclick="toggleMenu()">
                 <i data-lucide="menu" id="menu-icon" class="w-7 h-7"></i>
             </button>
         </nav>
 
-        <!-- MODERN MOBILE MENU OVERLAY -->
         <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
             <a href="../../../index.html" onclick="toggleMenu()"
                 class="block py-2 text-gray-300 hover:text-blue-400 transition duration-300">Home</a>
@@ -57,7 +49,7 @@
             <a href="../Experience/Experience.html" onclick="toggleMenu()"
                 class="block py-2 text-gray-300 hover:text-blue-400 transition duration-300">Experience</a>
             <a href="../IV/IV.html" onclick="toggleMenu()"
-                class="block py-2 text-gray-300 hover:text-blue-400 transition duration-300">Workshop & IV</a>
+                class="block py-2 text-gray-300 hover:text-blue-400 transition duration-300">Workshop &amp; IV</a>
             <a href="../Recent/Recent.html" onclick="toggleMenu()"
                 class="block py-2 text-gray-300 hover:text-blue-400 transition duration-300">Recent works</a>
             <a href="../Contact/contact.html" onclick="toggleMenu()"
@@ -67,7 +59,6 @@
 
     <main class="max-w-7xl mx-auto py-16 md:py-24 px-4 sm:px-6 lg:px-8">
 
-        <!-- Experience Headline -->
         <section id="experience-header" class="text-center max-w-4xl mx-auto mb-16">
             <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4 text-white reveal-element">
                 Professional <span
@@ -79,10 +70,8 @@
             <div class="h-1 w-20 bg-blue-500 mx-auto mb-8 rounded-full reveal-element delay-300"></div>
         </section>
 
-        <!-- Experience Timeline -->
         <section class="timeline">
 
-            <!-- Job Role 1: Senior Software Architect (Right side on desktop) -->
             <div class="timeline-item right reveal-element delay-400">
                 <div class="bg-[#161b22] p-6 rounded-xl shadow-2xl transition duration-300 hover:shadow-blue-500/30">
                     <h3 class="text-2xl font-bold text-blue-400">Student ambassador</h3>
@@ -94,7 +83,7 @@
                     <ul class="space-y-3 text-gray-300 text-sm list-none pl-0">
                         <li class="flex items-start">
                             <i data-lucide="check-circle" class="w-5 h-5 text-teal-400 mr-2 mt-0.5 flex-shrink-0"></i>
-                            India’s leading esports and gaming company, organizing major tournaments like BGMI Masters,
+                            India's leading esports and gaming company, organizing major tournaments like BGMI Masters,
                             Valorant Challengers, and DreamHack.
                         </li>
                         <li class="flex items-start">
@@ -121,7 +110,7 @@
                     <ul class="space-y-3 text-gray-300 text-sm list-none pl-0">
                         <li class="flex items-start">
                             <i data-lucide="check-circle" class="w-5 h-5 text-teal-400 mr-2 mt-0.5 flex-shrink-0"></i>
-                            Serving as the Student Vice President for the Game Design & Development Department,
+                            Serving as the Student Vice President for the Game Design &amp; Development Department,
                             coordinating student initiatives and activities.
                         </li>
                         <li class="flex items-start">
@@ -138,7 +127,6 @@
                 </div>
             </div>
 
-            <!-- Job Role 3: Junior Web Developer (Right side on desktop) -->
             <div class="timeline-item right reveal-element delay-600">
                 <div class="bg-[#161b22] p-6 rounded-xl shadow-2xl transition duration-300 hover:shadow-blue-500/30">
                     <h3 class="text-2xl font-bold text-blue-400">Logo design</h3>
@@ -163,7 +151,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="py-12 border-t border-gray-700 mt-12 px-4 bg-[#0a0e14]">
         <div class="max-w-4xl mx-auto text-center">
             <p class="text-gray-400 mb-4">Ready to move forward with a new opportunity?</p>

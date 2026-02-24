@@ -1,33 +1,30 @@
  :root {
-            --accent-color: #3b82f6; /* Blue-500 */
-        }
-        
-        /* Configure Tailwind to use Inter font and smooth scrolling */
-        html {
-            scroll-behavior: smooth; 
-        }
+     --accent-color: #3b82f6;
+ }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d1117; /* Dark background */
-            color: #f0f8ff; /* Light text */
-            transition: overflow 0.3s;
-        }
-        
-        /* Custom scroll-reveal styles */
-        .reveal-element {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
+ html {
+     scroll-behavior: smooth;
+ }
 
-        .reveal-element.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+ body {
+     font-family: 'Inter', sans-serif;
+     background-color: #0d1117;
+     color: #f0f8ff;
+     transition: overflow 0.3s;
+ }
 
-        /* Card Hover Effect */
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 0 4px 6px -2px rgba(59, 130, 246, 0.1);
-        }
+ .reveal-element {
+     opacity: 0;
+     transform: translateY(40px);
+     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+ }
+
+ .reveal-element.active {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ .card-hover:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 0 4px 6px -2px rgba(59, 130, 246, 0.1);
+ }
