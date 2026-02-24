@@ -83,6 +83,8 @@ body {
 
 .project-slide {
     padding: 0 1rem;
+    flex: 0 0 auto;
+    box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
